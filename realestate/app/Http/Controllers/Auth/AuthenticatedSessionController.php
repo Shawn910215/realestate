@@ -31,11 +31,11 @@ class AuthenticatedSessionController extends Controller
 
         $url = '';
         if ($request->user()->role === 'admin') {
-            $url = 'admin/dashboard';
+            $url = 'admin\dashboard';
         } elseif ($request->user()->role === 'agent') {
             $url = 'agent\dashboard';
         } elseif ($request->user()->role === 'user') {
-            $url = '\dashboard';
+            $url = 'dashboard';
         }
 
         // return redirect()->intended(RouteServiceProvider::HOME);
